@@ -45,7 +45,7 @@ public class TCP_Client1 {
         //create buffer reader to read input from user. 
 	//Read the user input to string 'sentence'
         
-        //linhas adicionadas
+        //Tenta executar esse código e caso der erro trata no catch
         try{
             System.out.println("Selecione uma das opções:");
             System.out.println("1) Calcular seu IMC");
@@ -76,6 +76,7 @@ public class TCP_Client1 {
             String response = serverReader.readLine();
             System.out.println(response);
         }
+        //Tratamento de exceção
         catch(InputMismatchException e){
             System.out.println("Esse número não é válido!");
         }
